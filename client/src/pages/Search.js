@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CardSearchDetails from '../components/CardSearchDetails'
 
@@ -6,13 +6,13 @@ import CardSearchDetails from '../components/CardSearchDetails'
 function Search() {
 
     //set State to display cards
-    const [ searchedCards, setSearchedCards ] = useState([]);
+    const [searchedCards, setSearchedCards] = useState([]);
 
     //set State to render loading screen, default false so its not showing
-    const [ loading, setLoading ] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     //state to set search variable, default chandra to make sure it renders, remove default later
-    const [ search, setSearch ] = useState('Chandra');
+    const [search, setSearch] = useState('Chandra');
 
 
     // handler to set search variable to whatever is in the input field
@@ -39,7 +39,7 @@ function Search() {
         //set loading to true then make api call
         setLoading(true);
         //api call
-        axios   
+        axios
             .get(`https://api.magicthegathering.io/v1/cards`)
             .then(res => {
                 //set card variable to all cards returned
@@ -65,29 +65,31 @@ function Search() {
 
     //else render the Form + search return
     return (
-        <div>
-             {/* <SearchForm /> */}
-            <h1>Search Form</h1>
-            <input
-                name="cardsearch"
-                value={search}
-                type="text"
-                placeholder="Search for a Card"
-                onChange={handleInputChange}
-            />
-            <button onClick={handleSubmitForm} type="button">Search for Cards</button>
-
-             {/* <SearchReturn /> */}
-             <h1>Search Return</h1>
-             {searchedCards.map((card) => (
-                 <div>
-                 <CardSearchDetails
-                    key={card.id}
-                    {...card} 
-                    />
+        <div className="center-align search">
+            <div>
+                {/* <SearchForm /> */}
+                <h1>Search For Magic the Gathering Cards</h1>
+                <input
+                    name="cardsearch"
+                    value={search}
+                    type="text"
+                    placeholder="Search for a Card"
+                    onChange={handleInputChange}
+                />
+                <button onClick={handleSubmitForm} type="button">Search for Cards</button>
+            </div>
+            <div>
+                {/* <SearchReturn /> */}
+                <h1>Results for "{search}"</h1>
+                <div className="row justify-content-center">
+                    {searchedCards.map((card) => (
+                        <CardSearchDetails
+                            key={card.id}
+                            {...card}
+                        />
+                    ))}
                 </div>
-             ))
-             }           
+            </div>
         </div>
     )
 }

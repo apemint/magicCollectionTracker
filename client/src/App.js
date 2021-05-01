@@ -1,3 +1,4 @@
+import "./App.css";
 import MyCards from './pages/MyCards'
 import Search from './pages/Search'
 import React from 'react';
@@ -11,7 +12,10 @@ function App() {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route exact path={["/", "cards"]}>
+          <Route exact path={["/", "/cards"]}>
+            <MyCards />
+          </Route>
+          <Route exact path={["/search"]}>
             <Search />
           </Route>
           <Route>

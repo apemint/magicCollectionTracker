@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 
 //This component handles the rendering of individual cards in MyCards.js 
 //(our collection)
@@ -7,10 +8,12 @@ import React from "react";
 function MyCardDetails(props) {
 
     return (
-        <div>
+        <Card fluid align="center" className="border-0 card-padding">
+            <Card.Body>
             <h2>{props.name}</h2>
             <img src={props.imageUrl} alt={props.name}></img>
-        </div>
+            </Card.Body>
+        </Card>
     )
 
 }

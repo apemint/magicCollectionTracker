@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import MyCardDetails from '../components/MyCardDetails'
+import { Card, Button } from "react-bootstrap";
 
 function MyCards() {
     const [cards, setCards] = useState([])
@@ -25,18 +26,21 @@ function MyCards() {
 
 
     return (
-        <div>
+        <div className="center-align search">
 
             <div>
+                <h1>My Collection</h1>
+                <div className="row justify-content-center">
                 {cards.map(card => (
                     <div>
                     <MyCardDetails 
                     key={card.id}
                     {...card} />
-                    <button
-                    onClick={() => {deleteCard(card._id)}}>Delete</button>
+                    <Button
+                    onClick={() => {deleteCard(card._id)}}>Delete</Button>
                     </div>
                 ))}
+                </div>
             </div>
         </div>
     )

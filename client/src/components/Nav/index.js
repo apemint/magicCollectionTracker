@@ -3,20 +3,20 @@ import '../Nav/style.css';
 function Navbar() {
     return (
 
-        <div class="pure-menu custom-restricted-width">
-            <span class="pure-menu-heading">MtG Collection Tracker</span>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <a href="#" class="pure-menu-link">My Collection</a>
+        <div className="pure-menu custom-restricted-width sidenav">
+            <span className="pure-menu-heading">MtG Collection Tracker</span>
+            <ul className="pure-menu-list">
+                <li className="pure-menu-item">
+                    <a href="/cards" className="pure-menu-link">My Collection</a>
                 </li>
-                <li class="pure-menu-item">
-                    <a href="#" class="pure-menu-link">Search</a>
+                <li className="pure-menu-item">
+                    <a href="/search" className="pure-menu-link">Search</a>
                 </li>
-                <li class="pure-menu-item">
-                    <a href="#" class="pure-menu-link">My Decks</a>
+                <li className="pure-menu-item">
+                    <a href="/404" className="pure-menu-link">My Decks *UNDER_CONSTRUCTION*</a>
                 </li>
-                <li class="pure-menu-item">
-                    <a href="#" class="pure-menu-link">About Us</a>
+                <li className="pure-menu-item">
+                    <a href="/404" className="pure-menu-link">About Us *UNDER_CONSTRUCTION</a>
                 </li>
             </ul>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import API from '../utils/API';
+import { Card } from 'react-bootstrap';
 
 
 // This component handles the rendering of individual cards which is then mapped over all results
@@ -21,13 +22,16 @@ function CardSearchDetails(props) {
     };
 
     return (
-        <div>
+        <Card fluid align="center" className="border-0 card-padding">
+            <Card.Body>
             <h2>{props.name}</h2>
             <img src={props.imageUrl} alt={props.name} />
+            <br />
             <button
             onClick={handleFormSubmit}
             >Save</button>
-        </div>
+            </Card.Body>
+        </Card>
     )
 }
 
