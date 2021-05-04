@@ -22,7 +22,7 @@ function CardSearchDetails(props) {
     };
 
     return (
-        <Card fluid align="center" className="border-0 card-padding">
+        <Card fluid align="center" className="border-0 card-margin">
             <Card.Body>
             <h2>{props.name}</h2>
             <img src={props.imageUrl} alt={props.name} />

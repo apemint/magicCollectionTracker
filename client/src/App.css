@@ -6,5 +6,12 @@
 }
 
 .search h1 {
-    color: black
+    color: #f0f0f0
+}
+.card-margin {
+    margin: 10px 10px 10px 10px;
+    width: 300px;
+    height: 520px;
+    background-color:darkgray;
+    color: black;
 }

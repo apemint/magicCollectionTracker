@@ -8,10 +8,10 @@ import { Card } from "react-bootstrap";
 function MyCardDetails(props) {
 
     return (
-        <Card fluid align="center" className="border-0 card-padding">
+        <Card fluid align="center" className="border-0 card-margin">
             <Card.Body>
             <h2>{props.name}</h2>
-            <img src={props.imageUrl} alt={props.name}></img>
+            <img src={props.imageUrl} alt={props.name} href="/cardzoomin"></img>
             </Card.Body>
         </Card>
     )

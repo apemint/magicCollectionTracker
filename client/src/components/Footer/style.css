@@ -1,0 +1,21 @@
+.footer {
+    background-image: url("../../assets/images/footerNoColor.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    padding-top: 40vh;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+.column-one {
+    margin-left: 5vw;
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        padding-top:0vh;
+    }
+}
