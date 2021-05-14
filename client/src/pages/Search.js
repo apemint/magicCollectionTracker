@@ -12,7 +12,7 @@ function Search() {
     const [loading, setLoading] = useState(false);
 
     //state to set search variable, default chandra to make sure it renders, remove default later
-    const [search, setSearch] = useState('Chandra');
+    const [search, setSearch] = useState('');
 
 
     // handler to set search variable to whatever is in the input field

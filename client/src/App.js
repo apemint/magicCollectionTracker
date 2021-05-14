@@ -4,7 +4,7 @@ import Search from './pages/Search'
 
 import React from 'react';
 import NoMatch from "./pages/NoMatch";
-import Navbar from './components/Nav/'
+import Navbar from './components/Nav/navbar2'
 import Footer from './components/Footer/'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 

@@ -7,21 +7,23 @@ const db = require("../models");
 //----CHANGE DB ---
 //////////////////////////////////
 mongoose.connect(
-    process.env.MONGODB_URI ||
-    "mongodb://localhost/mycards"
-  );
+  process.env.MONGODB_URI ||
+  "mongodb://localhost/mycards"
+);
+
+const cardSeed = [
   
-  const cardSeed = [
-    {
-      name:"Archangel Avacyn",
-      cmc: 5,
-      colors:"White",
-      imageUrl: "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card" ,
-      set: "SOI"
-    }
-  ];
-  
-  db.Card
+      {
+        name: "Archangel Avacyn",
+        cmc: 5,
+        colors: "White",
+        imageUrl: "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409741&type=card",
+        set: "SOI"
+      }
+    ]
+;
+
+db.Card
   .remove({})
   .then(() => db.Card.collection.insertMany(cardSeed))
   .then(data => {
